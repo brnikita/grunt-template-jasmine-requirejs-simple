@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner</title>
+    <% css.forEach(function(style){ %>
+    <link rel="stylesheet" type="text/css" href="<%= style %>">
+    <% }) %>
+
+    <% with (scripts) { %>
+    <% [].concat(polyfills, jasmine, boot, vendor).forEach(function(script){ %>
+    <script src="<%= script %>"></script>
+    <% }) %>
+    <% }; %>
+
+
+    <script src="<%= requirejs %>"></script>
+    <% if (options.requireConfigFile) { %>
+        <script src="<%= options.requireConfigFile %>"></script>
+    <% } %>
+    <% if (options.requireConfig) { %>
+        <script>
+            require.config(<%= serializeRequireConfig(options.requireConfig) %>);
+        </script>
+    <% } %>
+
+
+    <% with (scripts) { %>
+    <% [].concat(helpers, src, specs,reporters).forEach(function(script){ %>
+    <script src="<%= script %>"></script>
+    <% }) %>
+    <% }; %>
+</head>
+<body>
+</body>
+</html>
