@@ -1,6 +1,6 @@
 {
   "name": "grunt-template-jasmine-requirejs-simple",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Requirejs template for grunt-contrib-jasmine",
   "main": "src/template-jasmine-requirejs-simple.js",
   "scripts": {
