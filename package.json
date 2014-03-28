@@ -1,6 +1,6 @@
 {
     "name": "grunt-template-jasmine-requirejs-simple",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Requirejs template for grunt-contrib-jasmine",
     "main": "src/template-jasmine-requirejs-simple.js",
     "scripts": {
@@ -22,6 +22,9 @@
         "email": "branikita@gmail.com"
     },
     "license": "BSD",
+    "peerDependencies": {
+        "grunt-contrib-jasmine": "~0.6.3"
+    },
     "devDependencies": {
         "grunt-contrib-jasmine": "~0.6.3"
     }
